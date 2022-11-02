@@ -1,0 +1,7 @@
+require("borja.plugins-setup")
+require("borja.core.options")
+require("borja.core.keymaps")
+require("borja.core.colorscheme")
+require("borja.plugins.comment")
+require("borja.plugins.nvim-tree")
+require("borja.plugins.lualine")
