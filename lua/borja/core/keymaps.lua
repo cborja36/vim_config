@@ -31,7 +31,12 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
--- intert empty line without entering insert mode
+-- buffer navigation
+keymap.set("n", "<C-n>", ":bnext<CR>")
+keymap.set("n", "<C-p>", ":bprev<CR>")
+keymap.set("n", "<leader>ls", ":JABSOpen<CR>")
+
+-- insert empty line without entering insert mode
 keymap.set("n", "<leader>o", "o<Esc>")
 keymap.set("n", "<leader>O", "O<Esc>")
 
