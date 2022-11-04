@@ -96,6 +96,10 @@ return packer.startup(function(use)
   -- minimal buffer switcher
   use("matbme/JABS.nvim")
 
+  -- which key
+  use("folke/which-key.nvim")
+
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
