@@ -8,22 +8,52 @@ end
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
 -- change color for arrows in tree to light blue
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- configure nvim-tree
 nvimtree.setup({
-	-- change folder arrow icons
+
+	-- renderer
 	renderer = {
 		icons = {
-			glyphs = {
-				folder = {
-					arrow_closed = "", -- arrow when folder is closed
-					arrow_open = "", -- arrow when folder is open
-				},
-			},
-		},
+      git_placement = "signcolumn",
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "U",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    }
 	},
+
 	-- disable window_picker for
 	-- explorer to work well with
 	-- window splits
@@ -34,4 +64,14 @@ nvimtree.setup({
 			},
 		},
 	},
+
+  -- my additions
+  view = {
+    mappings = {
+      list = {
+        { key = "h", action = "close_node" },
+        { key = "v", action = "vsplit" },
+      }
+    }
+  }
 })
