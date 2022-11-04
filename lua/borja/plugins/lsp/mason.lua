@@ -19,7 +19,7 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"sumneko_lua",
-    "pylsp",
+    "pyright",
     "r_language_server",
     "clangd",
 	},
