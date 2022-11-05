@@ -102,6 +102,9 @@ return packer.startup(function(use)
   -- git fugitive
   use("tpope/vim-fugitive")
 
+  -- minimap
+  use("wfxr/minimap.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

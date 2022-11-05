@@ -38,4 +38,8 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- minimap options
+vim.cmd "let g:minimap_git_colors = 1"
+vim.cmd "let g:minimap_highlight_search = 1"
+
 opt.iskeyword:append("-") -- consider string-string as whole word
